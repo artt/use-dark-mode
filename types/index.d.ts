@@ -16,7 +16,7 @@ declare module '@fisch0920/use-dark-mode' {
    * An object returned from a call to `useDarkMode`.
    */
   export interface DarkMode {
-    readonly value: boolean;
+    readonly value: string;
     enable: () => void;
     disable: () => void;
     toggle: () => void;
@@ -26,7 +26,7 @@ declare module '@fisch0920/use-dark-mode' {
    * A custom React Hook to help you implement a "dark mode" component for your application.
    */
   export default function useDarkMode(
-    initialState?: boolean,
+    initialState?: string,
     config?: DarkModeConfig
   ): DarkMode;
 }

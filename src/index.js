@@ -46,9 +46,9 @@ const useDarkMode = (
 
   return {
     value: state,
-    enable: useCallback(() => setState(true), [setState]),
-    disable: useCallback(() => setState(false), [setState]),
-    toggle: useCallback(() => setState(current => !current), [setState]),
+    enable: useCallback(() => setState('dark'), [setState]),
+    disable: useCallback(() => setState('light'), [setState]),
+    toggle: useCallback(() => setState(current => current === 'light' ? 'dark' : 'light'), [setState]),
   };
 };
 
